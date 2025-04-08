@@ -16,7 +16,7 @@ const commonSchema = {
 
 // Admin
 const adminSchema = {
-  employeeId: { type: String, unique: true },
+  employeeId: { type: String, unique: true, sparse: true },
   accessLevel: { type: Number, default: 1 },
   joiningDate: { type: Date },
   designation: { type: String, default: "Admin" }
@@ -24,7 +24,7 @@ const adminSchema = {
 
 // Accountant
 const accountantSchema = {
-  employeeId: { type: String, unique: true },
+  employeeId: { type: String, unique: true, sparse: true },
   salary: { type: mongoose.Schema.Types.ObjectId, ref: 'Salary' },
   joiningDate: { type: Date },
   designation: { type: String, default: "Accountant" }
@@ -32,7 +32,7 @@ const accountantSchema = {
 
 // Teacher
 const teacherSchema = {
-  employeeId: { type: String, unique: true },
+  employeeId: { type: String, unique: true, sparse: true },
   subjects: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Subject' }],
   assignedClasses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Class' }],
   qualification: { type: String },
@@ -61,7 +61,6 @@ const parentSchema = {
       return this.role === 'parent';
     }
   },
-
   fatherInfo: {
     name: String, occupation: String, phone: String, photo: String
   },
