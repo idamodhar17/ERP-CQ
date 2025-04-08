@@ -14,6 +14,7 @@ const commonSchema = {
   createdAt: { type: Date, default: Date.now }
 };
 
+// Admin
 const adminSchema = {
   employeeId: { type: String, unique: true },
   accessLevel: { type: Number, default: 1 },
@@ -21,6 +22,7 @@ const adminSchema = {
   designation: { type: String, default: "Admin" }
 };
 
+// Accountant
 const accountantSchema = {
   employeeId: { type: String, unique: true },
   salary: { type: mongoose.Schema.Types.ObjectId, ref: 'Salary' },
@@ -28,6 +30,7 @@ const accountantSchema = {
   designation: { type: String, default: "Accountant" }
 };
 
+// Teacher
 const teacherSchema = {
   employeeId: { type: String, unique: true },
   subjects: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Subject' }],
@@ -38,15 +41,26 @@ const teacherSchema = {
   isClassTeacher: { type: Boolean, default: false }
 };
 
+// Parent (Student Info)
 const parentSchema = {
   studentId: { type: String, unique: true, sparse: true },
   admissionDate: { type: Date },
-  standard: { type: String, required: true },
+  standard: {
+    type: String,
+    required: function () {
+      return this.role === 'parent';
+    }
+  },
   division: { type: String },
   class: { type: mongoose.Schema.Types.ObjectId, ref: 'Class' },
   idCardUrl: { type: String },
   isActive: { type: Boolean, default: true },
-  academicYear: { type: String, required: true },
+  academicYear: {
+    type: String,
+    required: function () {
+      return this.role === 'parent';
+    }
+  },
 
   fatherInfo: {
     name: String, occupation: String, phone: String, photo: String
@@ -62,6 +76,7 @@ const parentSchema = {
   }
 };
 
+// Final Unified Schema
 const userSchema = new mongoose.Schema({
   ...commonSchema,
   ...adminSchema,
@@ -70,6 +85,7 @@ const userSchema = new mongoose.Schema({
   ...parentSchema
 }, { discriminatorKey: 'role' });
 
+// Pre-save: Generate studentId & default email for parents
 userSchema.pre("save", async function (next) {
   if (this.role !== "parent" || this.studentId) return next();
 
