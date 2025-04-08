@@ -10,4 +10,5 @@ const resourceSchema = new mongoose.Schema({
 });
 
 const Resource = mongoose.model('Resource', resourceSchema);
+
 export default Resource;

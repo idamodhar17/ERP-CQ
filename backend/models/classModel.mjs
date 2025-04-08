@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 const classSchema = new mongoose.Schema({
-    standard: { type: String, required: true }, // 1st, 2nd, etc.
-  division: { type: String, required: true }, // A, B, C
+  standard: { type: String, required: true },
+  division: { type: String, required: true },
   classTeacher: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   subjects: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Subject' }]
 });

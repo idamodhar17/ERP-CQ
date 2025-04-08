@@ -14,7 +14,6 @@ const commonSchema = {
   createdAt: { type: Date, default: Date.now }
 };
 
-// Role-specific schemas
 const adminSchema = {
   employeeId: { type: String, unique: true },
   accessLevel: { type: Number, default: 1 },
@@ -47,7 +46,7 @@ const parentSchema = {
   class: { type: mongoose.Schema.Types.ObjectId, ref: 'Class' },
   idCardUrl: { type: String },
   isActive: { type: Boolean, default: true },
-  academicYear: { type: String },
+  academicYear: { type: String, required: true },
 
   fatherInfo: {
     name: String, occupation: String, phone: String, photo: String
@@ -63,7 +62,6 @@ const parentSchema = {
   }
 };
 
-// Unified schema
 const userSchema = new mongoose.Schema({
   ...commonSchema,
   ...adminSchema,
@@ -72,13 +70,12 @@ const userSchema = new mongoose.Schema({
   ...parentSchema
 }, { discriminatorKey: 'role' });
 
-// Auto studentId
 userSchema.pre("save", async function (next) {
   if (this.role !== "parent" || this.studentId) return next();
 
   try {
     const counter = await Counter.findOneAndUpdate(
-      { type: "student" },
+      { academicYear: this.academicYear, class: this.standard },
       { $inc: { seq: 1 } },
       { new: true, upsert: true }
     );
