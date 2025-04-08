@@ -20,12 +20,11 @@ app.use(cors({ origin: "*", credentials: true }));
 
 app.use("/api/auth",authRoutes);
 app.use("/api/register", userRoutes);
-<<<<<<< Updated upstream
+
 app.use('/api/resources', resourceRoutes);
 
-export default app;
-=======
+
 app.use("/api/student", studentRoutes);
 
 export default app;
->>>>>>> Stashed changes
+
