@@ -38,7 +38,7 @@ function App() {
                                 <li className="">Generate admission ID</li>
                                 <li className="">Student fee</li>
                                 <li className=""><Link to="/StudentAttendance">Student Attendance</Link></li>
-                                <li className="">Student History</li>
+                               
 
                             </ul>
                         </details>

@@ -9,7 +9,7 @@ export default function StudentAttendance() {
     <section className="">
             <div className="">
 
-                <h1 className="text-2xl">Studnet Report</h1>
+                <h1 className="text-2xl">Studnet Attendace</h1>
 
             </div>
             <div className="shadow-lg p-6 mt-2 flex flex-col gap-6">
@@ -61,7 +61,7 @@ export default function StudentAttendance() {
             <div className=" mt-10 shadow-lg p-4">
               <div className="grid grid-cols-3 items-center">
                 <div className="">
-                  <h1 className="">Stundet Report</h1>
+                  <h1 className="">Stundet Attendance</h1>
                 </div>
 
                 <div className="flex items-center gap-2 ">
@@ -115,7 +115,9 @@ export default function StudentAttendance() {
                           </td>
                        
                         <td className="">
-                          <div className=""></div>
+                          <div className="">
+                          <input type="text" className="border-2 border-gray-400 px-6 py-1 rounded-sm" />
+                          </div>
                           </td>
                         
                       </tr>
@@ -147,11 +149,19 @@ export default function StudentAttendance() {
                             </div>
                           </td>
                         
-                        <td className="">World</td>
+                          <td className="">
+                          <div className="">
+                            <input type="text" className="border-2 border-gray-400 px-6 py-1 rounded-sm" />
+                          </div>
+                          </td>
                         
                       </tr>
                   </tbody>
                 </table>
+              </div>
+
+              <div className="flex justify-center items-center py-6">
+                <button className='bg-gradient-to-r to-blue-600 from-blue-400 px-6 py-2 text-white rounded-sm'>Save Attendace</button>
               </div>
               </form>
             </div>
