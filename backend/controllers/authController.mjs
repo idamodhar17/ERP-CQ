@@ -1,4 +1,4 @@
-import User from "../models/user.mjs";
+import User from "../models/User.mjs";
 import generateToken from "../utils/generateToken.mjs";
 
 export const loginUser = async (req, res) => {

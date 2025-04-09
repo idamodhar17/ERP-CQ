@@ -1,4 +1,4 @@
-import User from "../models/user.mjs";
+import User from "../models/User.mjs";
 
 export const registerUser = async (req, res) => {
   try {

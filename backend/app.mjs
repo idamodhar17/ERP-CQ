@@ -7,6 +7,7 @@ import resourceRoutes from './routes/resourceRoutes.mjs'
 import authRoutes from "./routes/authRoutes.mjs";
 import userRoutes from "./routes/userRoutes.mjs";
 import studentRoutes from './routes/studentRoutes.mjs';
+import classRoutes from "./routes/classRoutes.mjs";
 
 dotenv.config(); 
 
@@ -25,6 +26,7 @@ app.use('/api/resources', resourceRoutes);
 
 
 app.use("/api/student", studentRoutes);
+app.use('/api/classes', classRoutes);
 
 export default app;
 

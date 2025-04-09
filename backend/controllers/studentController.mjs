@@ -1,4 +1,4 @@
-import User from '../models/user.mjs';
+import User from '../models/User.mjs';
 import Fee from '../models/feeModel.mjs';
 import Attendance from '../models/attendanceModel.mjs';
 import Class from "../models/classModel.mjs";
