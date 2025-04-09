@@ -10,6 +10,11 @@ import StudentCategory from '../ADMIN/Student Info/StudentCategory/StudentCatego
 import AddStudent from '../ADMIN/Student Info/AddStudent/AddStudent';
 import StudentList from '../ADMIN/Student Info/StundetList/StudentList';
 import StudentAttendance from '../ADMIN/Student Info/StudentAttandance/StudentAttendance';
+import TeacherToDo from '../Teachers/Teacher To do/TeacherToDo';
+import TeacherHomeworkAddHW from '../Teachers/Teacher Homework/TeacherHomework-AddHW/TeacherHomework-AddHW';
+import TeacherHomeworkReport from '../Teachers/Teacher Homework/TeacherHomework-Report/TeacherHomeworkReport';
+
+
 
 export default function FrontendRoute() {
   return (
@@ -30,6 +35,10 @@ export default function FrontendRoute() {
     <Route path='/StudnetList' element={<StudentList/>}/>   
     <Route path='/StudentAttendance' element={<StudentAttendance/>} />
     <Route path="*" element={<Error />} />
+
+    <Route path="/TeacherToDo" element={<TeacherToDo />} />
+    <Route path="/TeacherHomework-AddHW" element={<TeacherHomeworkAddHW />} />
+    <Route path="/TeacherHomework-Report" element={<TeacherHomeworkReport />} />
 </Routes>
 
 
