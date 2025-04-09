@@ -1,0 +1,212 @@
+* {
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    z-index: 10;
+    overflow-y: scroll;
+    box-shadow: 10px 10px 5px whitesmoke;
+
+    /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+   
+  }
+
+  .sidebar > ul > li{
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.258);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 106, 255, 0.345);
+    transition: all ease-in-out 0s;
+  }
+
+  .sidebar  ul > li:hover{
+      background-color: #edf2f0;
+  }
+
+
+  
+  /* Details Dropdown Style */
+  .sidebar details summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar details ul {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+  
+  .sidebar details ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  /* Hide sidebar */
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+  
+  /* Main content */
+  .main {
+    flex-grow: 1;
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+    
+    width: 100%;
+  }
+  
+  .main.full {
+    margin-left: 0;
+  }
+  
+  /* Top Navbar */
+  .topnav {
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+  
+  .hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Content */
+  .content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #4e73df;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Remove default marker */
+.sidebar details summary {
+    list-style: none;
+    position: relative;
+    padding-right: 20px;
+  }
+  
+  /* Add custom arrow to the right */
+  .sidebar details summary::after {
+    content: "▸";
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Rotate arrow when open */
+  .sidebar details[open] summary::after {
+    transform: rotate(90deg);
+  }
+
+  .topnav-grid {
+    box-shadow: 10px 10px 5px whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .hamburger-btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    grid-column: span 1;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    grid-column: span 4; /* You can adjust to span 3/4 based on your needs */
+  }
+  
+  .search-box input {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    
+    border-radius: 4px;
+  }
+  
+  .icon {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .date-display {
+    color: #666;
+    font-size: 14px;
+    grid-column: span 1;
+  }
+  
+  .icon-wrapper {
+    justify-self: center;
+    grid-column: span 1;
+  }
+  
+
+  
