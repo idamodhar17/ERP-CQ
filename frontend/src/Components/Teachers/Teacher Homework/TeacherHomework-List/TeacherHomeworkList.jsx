@@ -1,11 +1,14 @@
 import { Search  } from "lucide-react";
 import { Copy , FileText , Sheet } from 'lucide-react';
 
-function TeacherHomeworkReport() {
+function TeacherHomeworkList() {
     return (
-        <div className="TeacherHomeworkReport">
-            <h1 className="p-2">Homework Report</h1>
-            <div className="grid grid-cols-4 items-center gap-5 text-gray-500 ">
+        <div className="TeacherHomeworkList-Page">
+           <div className="flex justify-between">
+             <h1 className="p-2">Homework List</h1>
+             <button className=" text-white bg-blue-500 rounded-lg px-3 py-1">+ Add Homework</button>
+             </div>
+            <div className="grid grid-cols-3 items-center gap-5 text-gray-500 ">
                 <div className="flex flex-col gap-2 text-gray-500 ">
                     <label className='text-gray-500'>CLASS</label>
                     <select name="" id="" className='px-6 py-2  border-2 border-gray-300 rounded-sm'>
@@ -38,10 +41,7 @@ function TeacherHomeworkReport() {
                         <option value="" className='' >Section 4</option>
                     </select>
                 </div>
-                <div>
-                    <label className="block mb-1">Admission Date</label>
-                    <input type="date" className="w-full border p-2 rounded" />
-                </div>
+
                 
 
             </div>
@@ -52,7 +52,7 @@ function TeacherHomeworkReport() {
                 <div className=" mt-10 shadow-lg p-4">
               <div className="grid grid-cols-3 items-center">
                 <div className="">
-                  <h1 className="">Stundet Report</h1>
+                  <h1 className="">Homework List</h1>
                 </div>
 
                 <div className="flex items-center gap-2 ">
@@ -70,66 +70,23 @@ function TeacherHomeworkReport() {
               <div className="w-full mt-6">
                 <table className='w-full'>
                   <thead className='bg-gray-100 py-2'>
-                      <td className="p-2">Student Name</td>
+                      <td className="p-2">SL</td>
                       <td className="">Class</td>
+                      <td className="">Section</td>
                       <td className="">Subject</td>
                       <td className="">Marks</td>
-                      <td className="">Submition Data</td>
-                      <td className="">Evaluation Date</td>
-                      <td className="">Evaluated By</td>
-                      <td className="">Status</td>
+                      <td className="">Homework Date</td>
+                      <td className="">Submition Date</td>
+                      <td className="">Evalution Date</td>
+                      <td className="">Created By</td>
                     
                   </thead>
-                  <tbody className=''>
-                      <tr className="border-b-2 border-b-gray-200">
-                        <td className="p-2">Krishna Kadukar</td>
-                        <td className="">Class5(B)</td>
-                        <td className="">Subject 1</td>
-                        <td className="">99</td>
-                        <td className="">1st Jan 2000</td>
-                        <td className="">20th Jan 2000</td>
-                        <td className="">Name 1</td>
-                        <td className=""><button>Completed</button></td>
-                      </tr>
-
-                      <tr className="border-b-2 border-b-gray-200">
-                        <td className="p-2">Krishna Kadukar</td>
-                        <td className="">Class5(B)</td>
-                        <td className="">Subject 1</td>
-                        <td className="">99</td>
-                        <td className="">1st Jan 2000</td>
-                        <td className="">20th Jan 2000</td>
-                        <td className="">Name 1</td>
-                        <td className=""><button>Completed</button></td>
-                      </tr>
-
-                      <tr className="border-b-2 border-b-gray-200">
-                        <td className="p-2">Krishna Kadukar</td>
-                        <td className="">Class5(B)</td>
-                        <td className="">Subject 1</td>
-                        <td className="">99</td>
-                        <td className="">1st Jan 2000</td>
-                        <td className="">20th Jan 2000</td>
-                        <td className="">Name 1</td>
-                        <td className=""><button>Completed</button></td>
-                      </tr>
-
-                      <tr className="border-b-2 border-b-gray-200">
-                        <td className="p-2">Krishna Kadukar</td>
-                        <td className="">Class5(B)</td>
-                        <td className="">Subject 1</td>
-                        <td className="">99</td>
-                        <td className="">1st Jan 2000</td>
-                        <td className="">20th Jan 2000</td>
-                        <td className="">Name 1</td>
-                        <td className=""><button>Completed</button></td>
-                      </tr>
-                  </tbody>
+                
                 </table>
               </div>
             </div>
         </div>
-    );
+    );  
 }
 
-export default TeacherHomeworkReport;
+export default TeacherHomeworkList;

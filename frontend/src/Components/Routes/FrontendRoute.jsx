@@ -13,7 +13,7 @@ import StudentAttendance from '../ADMIN/Student Info/StudentAttandance/StudentAt
 import TeacherToDo from '../Teachers/Teacher To do/TeacherToDo';
 import TeacherHomeworkAddHW from '../Teachers/Teacher Homework/TeacherHomework-AddHW/TeacherHomework-AddHW';
 import TeacherHomeworkReport from '../Teachers/Teacher Homework/TeacherHomework-Report/TeacherHomeworkReport';
-
+import TeacherHomeworkList from '../Teachers/Teacher Homework/TeacherHomework-List/TeacherHomeworkList';
 
 
 export default function FrontendRoute() {
@@ -21,8 +21,7 @@ export default function FrontendRoute() {
     <>
 
 <div className="mx-5 p-4">
-
-                        
+                     
 <Routes>
     <Route path="/Admin-Dashboard" element={<AdminDashboard />} />
     <Route path="/Student-Report" element={<StudentReport />} />
@@ -39,6 +38,7 @@ export default function FrontendRoute() {
     <Route path="/TeacherToDo" element={<TeacherToDo />} />
     <Route path="/TeacherHomework-AddHW" element={<TeacherHomeworkAddHW />} />
     <Route path="/TeacherHomework-Report" element={<TeacherHomeworkReport />} />
+    <Route path='/TeacherHomework-List' element={<TeacherHomeworkList/>}/>
 </Routes>
 
 
