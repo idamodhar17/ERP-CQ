@@ -5,6 +5,11 @@ import StudentReport from '../ADMIN/StudentReport/StudentReport';
 import SubjectAssign from '../ADMIN/Subject/SubjectAssign';
 import ClassTeacher from '../ADMIN/Assing Class Teacher/ClassTeacher';
 import Error from '../ERROR/Error';
+import AssignSubject from '../ADMIN/AssignSubject/AssignSubject';
+import StudentCategory from '../ADMIN/Student Info/StudentCategory/StudentCategory';
+import AddStudent from '../ADMIN/Student Info/AddStudent/AddStudent';
+import StudentList from '../ADMIN/Student Info/StundetList/StudentList';
+import StudentAttendance from '../ADMIN/Student Info/StudentAttandance/StudentAttendance';
 
 export default function FrontendRoute() {
   return (
@@ -18,6 +23,12 @@ export default function FrontendRoute() {
     <Route path="/Student-Report" element={<StudentReport />} />
     <Route path="/Subject" element={<SubjectAssign/>}/>
     <Route path='/ClassTeacher' element={<ClassTeacher/>} />
+    <Route path="/AssignSubject" element={<AssignSubject/>}/>
+
+    <Route path='/StudentCategory' element={<StudentCategory/>} />
+    <Route path='/AddStudent' element={<AddStudent/>}/>
+    <Route path='/StudnetList' element={<StudentList/>}/>   
+    <Route path='/StudentAttendance' element={<StudentAttendance/>} />
     <Route path="*" element={<Error />} />
 </Routes>
 

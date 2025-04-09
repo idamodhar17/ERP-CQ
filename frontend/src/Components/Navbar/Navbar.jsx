@@ -32,10 +32,12 @@ function App() {
                             <summary>Student Management</summary>
                             <ul>
                                 <li className=""><Link to="/Student-Report">Studnet Report</Link></li>
-                                <li className="">Assign students </li>
+                                <li className=""><Link to="/StudentCategory">Studnet Category</Link></li>
+                                <li className=""><Link to="/AddStudent">Add Students</Link> </li>
+                                <li className=""><Link to="/StudnetList">Student List</Link> </li>
                                 <li className="">Generate admission ID</li>
                                 <li className="">Student fee</li>
-                                <li className="">Student Attendance</li>
+                                <li className=""><Link to="/StudentAttendance">Student Attendance</Link></li>
                                 <li className="">Student History</li>
 
                             </ul>
@@ -47,6 +49,7 @@ function App() {
                             <ul>
                                 <li className="">Teacher Record</li>
                                 <li className="">Assign Teacher </li>
+                                <li className=""><Link to="/ClassTeacher">Assign Class Teacher</Link></li>
                                 <li className="">Subject List</li>
                                 <li className="">Teacher Roll</li>
                                 <li className="">Teacher History</li>
@@ -82,9 +85,10 @@ function App() {
                         <details>
                             <summary>Subject Management</summary>
                             <ul>
-                                <li className=""><Link to="/Subject">Assign Subject</Link></li>
+                                <li className=""><Link to="/Subject">Add Subject</Link></li>
+                                <li className=""><Link to="/AssignSubject">Assign Subject</Link></li>
                                 <li className="">Subject Teacher</li>
-                                <li className=""><Link to="/ClassTeacher">Assign Class Teacher</Link></li>
+                                
                             </ul>
                         </details>
                     </li>
