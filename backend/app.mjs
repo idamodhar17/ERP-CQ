@@ -62,13 +62,17 @@ app.get("/notices", async (req, res) => {
 //CREATE ROUTE
 app.post("/todo", async (req, res) => {
     try {
-        const { title, description, dueDate, priority, assignedTo } = req.body;
+        let { title, description, dueDate, priority, assignedTo } = req.body;
+
+        if (priority) {
+            priority = priority.toLowerCase(); // normalize case
+        }
+
         const newTodo = new Todo({ title, description, dueDate, priority, assignedTo });
-        // const newTodo = new Listing(req.body.Todo);
         await newTodo.save();
         res.status(201).json({ message: "TODO created successfully", notice: newTodo });
     } catch (err) {
-        console.error("Error retrieving Todo:", err);
+        console.error("Error creating Todo:", err);
         res.status(500).json({ message: err.message });
     }
 });

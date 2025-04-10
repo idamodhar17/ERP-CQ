@@ -30,9 +30,10 @@ const todoSchema = new mongoose.Schema({
   },
   priority: {
     type: String,
-    enum: ['low', 'medium', 'high'],
-    default: 'medium', // Default priority is "medium"
-  },
+    enum: ['low', 'medium', 'high'], // Check what's actually defined here
+    default: 'medium'
+},
+
 });
 
 // Create a model from the schema
