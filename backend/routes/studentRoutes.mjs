@@ -7,7 +7,8 @@ import {
   deleteStudent,
   assignClass,
   getStudentIdCard,
-  getStudentsByClass
+  getStudentsByClass,
+  admitStudent
 } from '../controllers/studentController.mjs';
 import protect from '../middleware/authMiddleware.mjs';
 
@@ -21,5 +22,7 @@ router.delete('/students/:id', protect, deleteStudent);
 router.put('/students/:id/assign-class', protect, assignClass);
 router.get('/students/:id/id-card', protect, getStudentIdCard);
 router.get('/class/:classId/students', protect, getStudentsByClass);
+router.post("/admission", admitStudent);
+
 
 export default router;

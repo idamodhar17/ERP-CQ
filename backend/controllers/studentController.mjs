@@ -81,20 +81,21 @@ export const assignClass = async (req, res) => {
 // Get student ID card
 export const getStudentIdCard = async (req, res) => {
   try {
-    const student = await User.findOne({ studentId: req.params.id, role: "parent" }).populate("class");
-    if (!student) return res.status(404).json({ message: "Student not found" });
+    const student = await User.findOne({ studentId: req.params.id, role: "parent" })
+      .populate("class", "standard division")
+      .select("name studentId class photo");
 
-    const idCard = {
+    if (!student) {
+      return res.status(404).json({ message: "Student not found" });
+    }
+
+    res.json({
       name: student.name,
       studentId: student.studentId,
       class: student.class?.standard,
       division: student.class?.division,
-      academicYear: student.academicYear,
       photo: student.photo,
-      idCardUrl: student.idCardUrl,
-    };
-
-    res.json(idCard);
+    });
   } catch (err) {
     res.status(500).json({ message: "Failed to fetch ID card", error: err.message });
   }
@@ -109,3 +110,15 @@ export const getStudentsByClass = async (req, res) => {
     res.status(500).json({ message: "Failed to fetch students", error: err.message });
   }
 };
+
+export const admitStudent = async (req, res) => {
+  try {
+    req.body.role = "parent";
+    const student = new User(req.body);
+    await student.save();
+    res.status(201).json({ message: "Student admitted", student });
+  } catch (err) {
+    res.status(400).json({ message: "Admission failed", error: err.message });
+  }
+};
+
