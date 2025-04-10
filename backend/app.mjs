@@ -11,6 +11,7 @@ import teacherRoutes from "./routes/teacherRoutes.mjs"
 import studentRoutes from './routes/studentRoutes.mjs';
 import classRoutes from "./routes/classRoutes.mjs";
 import subjectRoutes from "./routes/subjectRoutes.mjs";
+import noticeRoutes from "./routes/noticeRoutes.mjs";
 
 dotenv.config(); 
 
@@ -29,6 +30,7 @@ app.use('/api/teacher', teacherRoutes);
 app.use("/api/student", studentRoutes);
 app.use('/api/classes', classRoutes);
 app.use('/api/subjects', subjectRoutes);
+app.use('/api/notice', noticeRoutes);
 
 export default app;
 

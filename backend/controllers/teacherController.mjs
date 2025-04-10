@@ -1,5 +1,5 @@
 import Subject from "../models/subjectModel.mjs";
-import User from "../models/user.mjs";
+import User from "../models/User.mjs";
 
 export const createTeacher = async (req, res) => {
   try {
