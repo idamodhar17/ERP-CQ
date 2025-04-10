@@ -6,8 +6,7 @@ import connectDB from "./config/db.mjs";
 import resourceRoutes from './routes/resourceRoutes.mjs'
 import authRoutes from "./routes/authRoutes.mjs";
 import userRoutes from "./routes/userRoutes.mjs";
-import studentRoutes from './routes/studentRoutes.mjs';
-import classRoutes from "./routes/classRoutes.mjs";
+import teacherRoutes from "./routes/teacherRoutes.mjs"
 
 dotenv.config(); 
 
@@ -23,10 +22,7 @@ app.use("/api/auth",authRoutes);
 app.use("/api/register", userRoutes);
 
 app.use('/api/resources', resourceRoutes);
-
-
-app.use("/api/student", studentRoutes);
-app.use('/api/classes', classRoutes);
+app.use('/api/teacher', teacherRoutes);
 
 export default app;
 
