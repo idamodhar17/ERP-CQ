@@ -31,6 +31,13 @@ import TeacherDashboard from '../Teachers/TeacherDashboard/TeacherDashboard';
 import StudentProfile from '../Teachers/StudentProfile/StudentProfile';
 import OurProfile from '../Parent/OurStudentProfile/OurProfile';
 import StaffSalary from '../AccountSection/StaffSalary/StaffSalary';
+import TeacherHomeworkAddHW from '../Teachers/Teacher Homework/TeacherHomework-AddHW/TeacherHomework-AddHW';
+import TeacherHomeworkReport from '../Teachers/Teacher Homework/TeacherHomework-Report/TeacherHomeworkReport';
+import TeacherHomeworkList from '../Teachers/Teacher Homework/TeacherHomework-List/TeacherHomeworkList';
+import Notice from '../Notice/Notice';
+import ContentResources from '../../Resources/ContentResources/ContentResources';
+import TopicResources from '../../Resources/TopicResources/TopicResources';
+import LessonResources from '../../Resources/LessonResources/LessonResources';
 
 
 export default function FrontendRoute() {
@@ -80,12 +87,18 @@ export default function FrontendRoute() {
     <Route path="/TeacherHomework-AddHW" element={<TeacherHomeworkAddHW />} />
     <Route path="/TeacherHomework-Report" element={<TeacherHomeworkReport />} />
     <Route path='/TeacherHomework-List' element={<TeacherHomeworkList/>}/>
+
+          <Route path='/Notice' element={<Notice />} />
+          <Route path='/Resources-ContentUpload' element={<ContentResources />} />
+          <Route path='/TopicResources' element={<TopicResources />} />
+          <Route path='/LessonResources' element={<LessonResources />} />
 </Routes>
 
 
+         
+       
 
-</div>
-
+      </div>
     </>
   )
 }

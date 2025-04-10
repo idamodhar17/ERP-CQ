@@ -1,0 +1,51 @@
+.LessonResources-title , .LessonResources-subject , .LessonResources-available , .LessonResources-class
+, .LessonResources-section , .LessonResources-lesson {
+    display: flex;
+    flex-direction: column;
+    color: grey;
+    padding: 4%;
+}
+
+.LessonResources-MainPage{
+    display: flex;
+    gap: 2%;
+}
+
+.LessonResources-left h1{
+    padding: 2%;
+    font-size: large;
+}
+
+.LessonResources-left{
+    width: 30%;
+    box-shadow:  0 4px 12px rgb(0, 0, 0 , 0.1);
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 1%;
+}
+
+.LessonResources-radio{
+    display: flex;
+    gap: 5%;
+}
+
+.LessonResources-title input , .LessonResources-class select , .LessonResources-subject select 
+    , .LessonResources-section select , .LessonResources-lesson select{
+    border: 1px solid gray;
+    border-radius: 7px;
+    padding: 3%;
+}
+
+.LessonResources-btn button {
+    color: white;
+    padding: 2% 15%;
+    border-radius: 10px;
+    margin-top: 4%;
+    cursor: pointer;
+    background-color: rgba(0, 76, 255, 0.669);
+}
+
+.LessonResources-btn{
+    display: flex;
+    justify-content: center;
+}
