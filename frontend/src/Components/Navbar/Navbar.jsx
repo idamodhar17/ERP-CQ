@@ -195,7 +195,7 @@ function App() {
 
                         <li><Link to="/TeacherDashboard">Dashboard</Link></li>
 
-                        <li className=""><Link to="/StudentReport">Student Report</Link></li>
+                        <li className=""><Link to="/Student-Report">Student Report</Link></li>
 
                         <li className=""><Link to="/StudentProfile">Student Profile</Link></li>
 
@@ -276,7 +276,7 @@ function App() {
                         &#9776;
                     </button>
 
-                    <div className=" max-md:hidden">
+                    <div className="search-box max-md:hidden">
                         <Search className="icon" />
                         <input type="text" placeholder="Search..." />
                     </div>
