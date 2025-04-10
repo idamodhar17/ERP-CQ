@@ -83,7 +83,7 @@ function LessonResources() {
                         </div>
 
                         <div className="w-full mt-6">
-                            <table className='w-full'>
+                            <table className='w-full overflow-x-auto'>
                                 <thead className='bg-gray-100 py-2'>
                                     <td className="p-2">SL</td>
                                     <td className="">Class</td>
