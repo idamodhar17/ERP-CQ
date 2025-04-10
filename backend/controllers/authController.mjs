@@ -37,3 +37,23 @@ export const loginUser = async (req, res) => {
         res.status(500).json({ message: "Server error", error: err.message });
     }
 }
+
+export const resetPassword = async (req, res) => {
+    const { userId, newPassword } = req.body;
+
+    try {
+        if (!req.user || req.user.role !== "admin") {
+            return res.status(403).json({ message: "Only admins can reset passwords" })
+        }
+
+        const user = await User.findById(userId);
+        if (!user) return res.status(404).json({ message: "User not found" });
+
+        user.password = newPassword;
+        await user.save();
+
+        res.json({ message: "Password reset successfully" });
+    } catch (err) {
+        res.status(500).json({ message: "Failed to reset password", error: err.message });
+    }
+};
