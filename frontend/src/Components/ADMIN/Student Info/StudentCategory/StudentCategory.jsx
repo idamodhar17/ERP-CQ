@@ -10,7 +10,7 @@ export default function StudentCategory() {
 
                 <h1 className='text-2xl '></h1>
 
-                <div className="grid grid-cols-4 text-gray-800 mt-7 gap-6">
+                <div className="grid md:grid-cols-4 text-gray-800 mt-7 gap-6">
 
                     <div className="shadow-lg p-6 flex flex-col gap-6">
                         <h1 className='text-lg'>Add Student Category</h1>
@@ -27,9 +27,9 @@ export default function StudentCategory() {
                         </form>
                     </div>
 
-                    <div className="col-span-3">
+                    <div className="md:col-span-3">
                         <div className=" mt-10 shadow-lg p-4">
-                            <div className="grid grid-cols-3 items-center">
+                            <div className="grid md:grid-cols-3 gap-3 items-center">
                                 <div className="">
                                     <h1 className="">Stundet Category</h1>
                                 </div>
@@ -46,7 +46,7 @@ export default function StudentCategory() {
                                 </div>
                             </div>
 
-                            <div className="w-full mt-6">
+                            <div className="w-full mt-6 overflow-x-auto">
                                 <table className='w-full'>
                                     <thead className='bg-gray-100 py-2'>
                                         <td className="p-2">Sr</td>

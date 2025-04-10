@@ -29,7 +29,7 @@ export default function TodoList() {
 
   return (
     <div className=" flex items-center justify-center ">
-      <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md">
+      <div className="bg-white md:p-8 p-4 rounded-2xl shadow-2xl w-full max-w-md">
         <h2 className="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
           To-Do List 📋
         </h2>

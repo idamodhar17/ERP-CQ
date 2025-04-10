@@ -46,13 +46,11 @@ export default function FeesInvoice() {
                 <div className="">
                     <h1 className="text-2xl">Fees Invoice</h1>
 
-                    {/* <div className="mt-4">
-                    <button className='px-10 py-1 text-white rounded-lg bg-gradient-to-r from-blue-600 to-blue-500'>+ ADD</button>
-                </div> */}
+                  
 
                     <div className="">
                         <div className=" mt-10 shadow-lg p-4">
-                            <div className="grid grid-cols-3 items-center">
+                            <div className="grid gap-3 md:grid-cols-3 items-center">
                                 <div className="">
                                     <h1 className=""></h1>
                                 </div>
@@ -69,8 +67,8 @@ export default function FeesInvoice() {
                                 </div>
                             </div>
 
-                            <div className="w-full mt-6 text-gray-800">
-                            <table className="w-full">
+                            <div className="w-full mt-6 text-gray-800 overflow-x-auto">
+                            <table className="w-full max-md:border-separate border-spacing-x-4 border-spacing-y-0">
                                 <thead className="bg-gray-100 py-2">
                                     <tr>
                                         <td className="p-2">Sr</td>

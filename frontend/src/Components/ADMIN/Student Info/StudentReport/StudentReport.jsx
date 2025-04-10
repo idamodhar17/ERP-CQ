@@ -14,7 +14,7 @@ export default function StudentReport() {
             <div className="shadow-lg p-6 mt-2 flex flex-col gap-6">
                 <h1 className="text-lg ">Select Criteria</h1>
 
-                <div className="grid grid-cols-4 items-center gap-5  ">
+                <div className="grid md:grid-cols-4 items-center gap-5  ">
 
                     <div className="flex flex-col gap-2 text-gray-500 ">
                         <label className='text-gray-500'>Class</label>
@@ -67,7 +67,7 @@ export default function StudentReport() {
             </div>
 
             <div className=" mt-10 shadow-lg p-4">
-              <div className="grid grid-cols-3 items-center">
+              <div className="grid md:grid-cols-3 gap-3 items-center">
                 <div className="">
                   <h1 className="">Stundet Report</h1>
                 </div>
@@ -84,8 +84,8 @@ export default function StudentReport() {
                 </div>
               </div>
 
-              <div className="w-full mt-6">
-                <table className='w-full'>
+              <div className="w-full mt-6 overflow-x-auto">
+                <table className='w-full border-separate border-spacing-x-4'>
                   <thead className='bg-gray-100 py-2'>
                       <td className="p-2">Class</td>
                       <td className="">Section</td>

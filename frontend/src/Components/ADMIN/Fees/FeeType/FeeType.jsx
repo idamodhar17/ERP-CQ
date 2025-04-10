@@ -10,7 +10,7 @@ export default function FeeType() {
 
 <h1 className='text-2xl '>Fee Type</h1>
 
-<div className="grid grid-cols-4 text-gray-800 mt-7 gap-6">
+<div className="grid md:grid-cols-4 text-gray-800 mt-7 gap-6">
 
     <div className="shadow-lg p-6 flex flex-col gap-6">
         <h1 className='text-lg'>Add Fee Group</h1>
@@ -49,9 +49,9 @@ export default function FeeType() {
         </form>
     </div>
 
-    <div className="col-span-3">
-        <div className=" mt-10 shadow-lg p-4">
-            <div className="grid grid-cols-3 items-center">
+    <div className="md:col-span-3">
+        <div className=" md:mt-10 shadow-lg p-4">
+            <div className="grid gap-3 md:grid-cols-3 items-center">
                 <div className="">
                     <h1 className="">Fee Type</h1>
                 </div>
@@ -68,8 +68,8 @@ export default function FeeType() {
                 </div>
             </div>
 
-            <div className="w-full mt-6">
-                <table className='w-full'>
+            <div className="w-full mt-6 overflow-x-auto">
+                <table className='w-full max-md:border-separate border-spacing-x-4 border-spacing-y-0'>
                     <thead className='bg-gray-100 py-2'>
                         <td className="p-2">Name</td>
                         <td className="">Fee Group</td>

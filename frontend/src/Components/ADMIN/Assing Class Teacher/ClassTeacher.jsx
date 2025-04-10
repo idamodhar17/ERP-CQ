@@ -10,7 +10,7 @@ export default function ClassTeacher() {
 
                 <h1 className='text-2xl '>Assign Class Teacher</h1>
 
-                <div className="grid grid-cols-4 text-gray-800 mt-7 gap-6">
+                <div className="grid md:grid-cols-4 text-gray-800 mt-7 gap-6">
 
                     <div className="shadow-lg p-6 flex flex-col gap-6">
                         <h1 className='text-lg'>Assign Class Teacher</h1>
@@ -70,9 +70,9 @@ export default function ClassTeacher() {
                         </form>
                     </div>
 
-                    <div className="col-span-3">
+                    <div className="md:col-span-3">
                         <div className=" mt-10 shadow-lg p-4">
-                            <div className="grid grid-cols-3 items-center">
+                            <div className="grid md:grid-cols-3 gap-3 items-center">
                                 <div className="">
                                     <h1 className="">Class Teacher</h1>
                                 </div>

@@ -8,7 +8,7 @@ export default function GenrateId() {
             <h1 className="text-2xl">Genrate ID</h1>
 
             <div className="mt-10 shadow-lg p-6  text-gray-800">
-                <div className="grid grid-cols-3 gap-10 items-center">
+                <div className="grid md:grid-cols-3 gap-10 items-center">
                     <div className="flex flex-col">
                         <label htmlFor="">Name</label>
                         <input type="text" className='px-6 py-2 border-2 border-gray-300 rounded-lg' />

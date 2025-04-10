@@ -1,53 +1,54 @@
 import React from 'react'
+import TodoList from '../../Teachers/ToDoList/ToDoList'
 
 export default function AdminDashboard() {
     return (
         <>
 
             <section className="">
-                <div className=" p-4">
+                <div className=" md:p-4">
                     <div className="shadow-xl p-6 rounded-2xl">
                         <div className="">
                             <h1 className="font-bold text-3xl">Welcome</h1>
                         </div>
-                        <div className="grid grid-cols-3 items-center gap-10 mt-4 ">
-                            <div className="flex justify-between items-start bg-gradient-to-r from-[#0acec7] to-[#2baeaaa1] p-4 rounded-xl text-white font-bold ">
+                        <div className="grid grid-cols-3 items-center md:gap-10 gap-2 mt-4 ">
+                            <div className="flex justify-between items-start bg-gradient-to-r from-[#0acec7] to-[#2baeaaa1] md:p-4 p-2 rounded-xl text-white font-bold ">
                                 <div className="flex flex-col gap-2 ">
-                                    <h1 className="text-xl">Student</h1>
-                                    <h3 className="font-medium">Total Studnet</h3>
+                                    <h1 className="text-xl max-md:text-sm">Student</h1>
+                                    <h3 className="font-medium max-md:text-sm">Total Studnet</h3>
                                 </div>
-                                <div className="text-xl">100</div>
+                                <div className="text-xl max-md:text-sm">100</div>
                             </div>
 
-                            <div className="flex justify-between items-start bg-gradient-to-r from-[#0ace2e] to-[#2bae3fa1] p-4 rounded-xl text-white font-bold ">
+                            <div className="flex justify-between items-start bg-gradient-to-r from-[#0ace2e] to-[#2bae3fa1] md:p-4 p-2 rounded-xl text-white font-bold ">
                                 <div className="flex flex-col gap-2 ">
-                                    <h1 className="text-xl">Teacher</h1>
-                                    <h3 className="font-medium">Total Teacehr</h3>
+                                    <h1 className="text-xl max-md:text-sm">Teacher</h1>
+                                    <h3 className="font-medium max-md:text-sm">Total Teacehr</h3>
                                 </div>
-                                <div className="text-xl">20</div>
+                                <div className="text-xl max-md:text-sm">20</div>
                             </div>
 
 
 
-                            <div className="flex justify-between items-start bg-gradient-to-r from-[#ad0ace] to-[#5e259ba1] p-4 rounded-xl text-white font-bold ">
+                            <div className="flex justify-between items-start bg-gradient-to-r from-[#ad0ace] to-[#5e259ba1] md:p-4 p-2 rounded-xl text-white font-bold ">
                                 <div className="flex flex-col gap-2 ">
-                                    <h1 className="text-xl">Staffs</h1>
-                                    <h3 className="font-medium">Total Studnet</h3>
+                                    <h1 className="text-xl max-md:text-sm">Staffs</h1>
+                                    <h3 className="font-medium max-md:text-sm">Total Staffs</h3>
                                 </div>
-                                <div className="text-xl">10</div>
+                                <div className="text-xl max-md:text-sm">10</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className=" ">
-                    <div className="grid grid-cols-5 items-center gap-4 mt-4">
-                        <div className="col-span-3 bg-gray-200 h-96 shadow-xl">
-                            
+                    <div className="grid md:grid-cols-5 items-center gap-4 mt-4">
+                        <div className="md:col-span-3 bg-gray-200 h-96 shadow-xl">
+
 
                         </div>
-                        <div className="col-span-2 bg-gray-200 h-96 shadow-xl">
-                        
+                        <div className="md:col-span-2 bg-gray-200 w-full h-96 shadow-xl">
+
                         </div>
                     </div>
                 </div>
@@ -58,11 +59,11 @@ export default function AdminDashboard() {
                     <div className="shadow-lg grid  items-center">
                         <table className='w-full text-gray-600'>
                             <thead className='border-b-2 border-b-gray-200'>
-                               
-                                    <td className="p-4">Title</td>
-                                    <td className="">Message</td>
-                                    <td className="">Action</td>
-                                
+
+                                <td className="p-4">Title</td>
+                                <td className="">Message</td>
+                                <td className="">Action</td>
+
                             </thead>
                             <tbody>
                                 <tr className='border-b-2 border-b-gray-200 px-4 '>
@@ -91,6 +92,10 @@ export default function AdminDashboard() {
                             </tbody>
                         </table>
                     </div>
+                </div>
+
+                <div className="mt-10">
+                    <TodoList />
                 </div>
 
 

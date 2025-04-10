@@ -19,7 +19,7 @@ export default function StudentAttendance() {
 
                 </div>
 
-                <div className="grid grid-cols-3 items-center gap-5  ">
+                <div className="grid md:grid-cols-3 items-center gap-5  ">
 
                     <div className="flex flex-col gap-2 text-gray-500 ">
                         <label className='text-gray-500'>Class</label>
@@ -43,9 +43,9 @@ export default function StudentAttendance() {
                         </select>
                     </div>
 
-                    <div className="flex flex-col gap-2 text-gray-500 ">
+                    <div className="flex flex-col gap-2 text-gray-500  ">
                         <label className='text-gray-500'>Date</label>
-                        <input type="date" name="" id="" className='px-6 py-2  border-2 border-gray-300 rounded-sm' />
+                        <input type="date" name="" id="" className='px-6 py-2 w-full  border-2 border-gray-300 rounded-sm' />
                         
                     </div>
 
@@ -59,7 +59,7 @@ export default function StudentAttendance() {
             </div>
 
             <div className=" mt-10 shadow-lg p-4">
-              <div className="grid grid-cols-3 items-center">
+              <div className="grid md:grid-cols-3 max-md:gap-4 items-center">
                 <div className="">
                   <h1 className="">Stundet Attendance</h1>
                 </div>
@@ -76,8 +76,8 @@ export default function StudentAttendance() {
                 </div>
               </div>
 
-              <form action="">
-              <table className='w-full table-auto border-collapse'>
+              <form action="" className='overflow-x-auto max-md:mt-4'>
+              <table className='w-full table-auto border-collapse overflow-x-auto max-md:mt-4'>
   <thead className='bg-gray-100'>
     <tr>
       <th className="text-left p-3">Admission No</th>

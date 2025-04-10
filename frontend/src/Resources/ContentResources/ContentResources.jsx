@@ -48,8 +48,13 @@ function ContentResources() {
                             <option>Section 4</option>
                         </select>
                     </div>
+
+                    <div className="text-gray-400 flex flex-col gap-2 mt-2">
+                        <label>Upload Content </label>
+                        <input type="file" placeholder="Title" className='bg-blue-400 text-white py-2 px-6 border-2 rounded-2xl border-black' />
+                    </div>
                 </div>
-                <div className="ContentResources-right">
+                <div className="ContentResources-right w-full">
                     <div className=" mt-10 shadow-lg p-4">
                         <div className="grid grid-cols-3 items-center">
                             <div className="">
@@ -88,7 +93,21 @@ function ContentResources() {
                                         <td className="">1st Jan 2000</td>
                                         <td className="">All Admin </td>
                                         <td className="">Class 1 (A)</td>
-                                        <td className=""><button>Select</button></td>
+                                        <td>
+                                            <div className="relative group inline-block">
+                                                <button className="select px-6 border-2 border-blue-500 rounded-2xl hover:bg-blue-600 hover:text-white">
+                                                    select
+                                                </button>
+                                                <ul className="action bg-gray-100 p-4 flex-col gap-2 shadow-2xl absolute w-full pt-2 hidden group-hover:flex z-10">
+                                                    <li className="hover:bg-gray-200 p-2">
+                                                        <button >Edit</button>
+                                                    </li>
+                                                    <li className="hover:bg-gray-200 p-2">
+                                                        <button>Delete</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr className="border-b-2 border-b-gray-200">
                                         <td className="p-2">1</td>
@@ -97,7 +116,21 @@ function ContentResources() {
                                         <td className="">1st Jan 2000</td>
                                         <td className="">All Admin </td>
                                         <td className="">Class 1 (A)</td>
-                                        <td className=""><button>Select</button></td>
+                                        <td>
+                                            <div className="relative group inline-block">
+                                                <button className="select px-6 border-2 border-blue-500 rounded-2xl hover:bg-blue-600 hover:text-white">
+                                                    select
+                                                </button>
+                                                <ul className="action bg-gray-100 p-4 flex-col gap-2 shadow-2xl absolute w-full pt-2 hidden group-hover:flex z-10">
+                                                    <li className="hover:bg-gray-200 p-2">
+                                                        <button >Edit</button>
+                                                    </li>
+                                                    <li className="hover:bg-gray-200 p-2">
+                                                        <button>Delete</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr className="border-b-2 border-b-gray-200">
                                         <td className="p-2">1</td>
@@ -106,7 +139,21 @@ function ContentResources() {
                                         <td className="">1st Jan 2000</td>
                                         <td className="">All Admin </td>
                                         <td className="">Class 1 (A)</td>
-                                        <td className=""><button>Select</button></td>
+                                        <td>
+                                            <div className="relative group inline-block">
+                                                <button className="select px-6 border-2 border-blue-500 rounded-2xl hover:bg-blue-600 hover:text-white">
+                                                    select
+                                                </button>
+                                                <ul className="action bg-gray-100 p-4 flex-col gap-2 shadow-2xl absolute w-full pt-2 hidden group-hover:flex z-10">
+                                                    <li className="hover:bg-gray-200 p-2">
+                                                        <button >Edit</button>
+                                                    </li>
+                                                    <li className="hover:bg-gray-200 p-2">
+                                                        <button>Delete</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr className="border-b-2 border-b-gray-200">
                                         <td className="p-2">1</td>
@@ -115,7 +162,21 @@ function ContentResources() {
                                         <td className="">1st Jan 2000</td>
                                         <td className="">All Admin </td>
                                         <td className="">Class 1 (A)</td>
-                                        <td className=""><button>Select</button></td>
+                                        <td>
+                                            <div className="relative group inline-block">
+                                                <button className="select px-6 border-2 border-blue-500 rounded-2xl hover:bg-blue-600 hover:text-white">
+                                                    select
+                                                </button>
+                                                <ul className="action bg-gray-100 p-4 flex-col gap-2 shadow-2xl absolute w-full pt-2 hidden group-hover:flex z-10">
+                                                    <li className="hover:bg-gray-200 p-2">
+                                                        <button >Edit</button>
+                                                    </li>
+                                                    <li className="hover:bg-gray-200 p-2">
+                                                        <button>Delete</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr className="border-b-2 border-b-gray-200">
                                         <td className="p-2">1</td>
@@ -124,18 +185,32 @@ function ContentResources() {
                                         <td className="">1st Jan 2000</td>
                                         <td className="">All Admin </td>
                                         <td className="">Class 1 (A)</td>
-                                        <td className=""><button>Select</button></td>
+                                        <td>
+                                            <div className="relative group inline-block">
+                                                <button className="select px-6 border-2 border-blue-500 rounded-2xl hover:bg-blue-600 hover:text-white">
+                                                    select
+                                                </button>
+                                                <ul className="action bg-gray-100 p-4 flex-col gap-2 shadow-2xl absolute w-full pt-2 hidden group-hover:flex z-10">
+                                                    <li className="hover:bg-gray-200 p-2">
+                                                        <button >Edit</button>
+                                                    </li>
+                                                    <li className="hover:bg-gray-200 p-2">
+                                                        <button>Delete</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
                                     </tr>
 
-                                 
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-                </div>
             </div>
-            );
+        </div>
+    );
 }
 
-            export default ContentResources;
+export default ContentResources;

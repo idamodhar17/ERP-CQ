@@ -9,9 +9,9 @@ export default function SubjectAssign() {
       <section className="">
         <h1 className='text-2xl '>Subject</h1>
 
-        <div className="grid grid-cols-4 text-gray-800 mt-7 gap-6">
+        <div className="grid md:grid-cols-4 text-gray-800 mt-7 gap-6">
 
-          <div className="shadow-lg p-6 flex flex-col gap-6">
+          <div className="shadow-lg md:p-6 p-4 flex flex-col gap-6">
             <h1 className='text-lg'>Add Subject</h1>
             <div className="flex flex-col">
               <label htmlFor="" className='text-sm'>SUBJECT NAME</label>
@@ -33,11 +33,15 @@ export default function SubjectAssign() {
               <label htmlFor="" className='text-sm'>SUBJECT Code</label>
               <input type="text" className="border-2 border-gray-300 px-4 py-2 rounded-lg" />
             </div>
+
+            <div className="flex justify-center">
+              <button className="bg-blue-500 text-white px-6 py-1 rounded-lg">ADD</button>
+            </div>
           </div>
 
-          <div className="col-span-3">
+          <div className="md:col-span-3">
             <div className=" mt-10 shadow-lg p-4">
-              <div className="grid grid-cols-3 items-center">
+              <div className="grid gap-3 md:grid-cols-3 items-center">
                 <div className="">
                   <h1 className="">Stundet Report</h1>
                 </div>
@@ -54,8 +58,8 @@ export default function SubjectAssign() {
                 </div>
               </div>
 
-              <div className="w-full mt-6">
-                <table className='w-full'>
+              <div className="w-full mt-6 overflow-x-auto">
+                <table className='w-full max-md:border-separate border-spacing-x-4 border-spacing-y-0'>
                   <thead className='bg-gray-100 py-2'>
                     <td className="p-2">Sr</td>
                     <td className="">Subject</td>

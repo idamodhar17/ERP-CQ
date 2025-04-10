@@ -53,6 +53,11 @@ function LessonResources() {
                         <input type="text" placeholder="Title" />
                     </div>
 
+                    <div className="text-gray-400 flex flex-col gap-2 mt-2">
+                        <label>Upload Content </label>
+                        <input type="file" placeholder="Title" className='bg-blue-400 text-white py-2 px-6 border-2 rounded-2xl border-black' />
+                    </div>
+
 
                     <div className='LessonResources-btn'>
                         <button>Save lesson</button>

@@ -5,8 +5,8 @@ import './Navbar.css';
 import FrontendRoute from '../Routes/FrontendRoute';
 
 function App() {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-    const [userRole, setUserRole] = useState("accout"); // Change this to "teacher" to test teacher view
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [userRole, setUserRole] = useState("teacher"); // Change this to "teacher" to test teacher view
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -17,6 +17,7 @@ function App() {
 
     return (
         <div className="container text-blue-400">
+            
             {/* Sidebar */}
             <div className={`sidebar ${isSidebarOpen ? '' : 'hidden'}`}>
                 <h2>Codequell</h2>
@@ -122,7 +123,18 @@ function App() {
                             </details>
                         </li>
 
-                        <li>Broadcast Notices</li>
+                        <li className=""><Link to="/Notice">Broadcast Notices</Link></li>
+
+                        <li>
+                            <details>
+                                <summary>Resourse</summary>
+                                <ul>
+                                    <li><Link to="/Resources-ContentUpload">Content Resource</Link></li>
+                                    <li><Link to="/LessonResources">Lesson Resource</Link></li>
+                                    <li><Link to="/TopicResources">Topic Resource</Link></li>
+                                </ul>
+                            </details>
+                        </li>
 
                         <li><Link to="/ResetPassword">Password Management</Link></li>
 
@@ -154,7 +166,7 @@ function App() {
 
                         <li className=""><Link to="/StudentProfile">Student Profile</Link></li>
 
-                        <li className=""><Link to="">Broadcast Notices</Link></li>
+                        <li className=""><Link to="/Notice">Broadcast Notices</Link></li>
 
 
 
@@ -189,9 +201,18 @@ function App() {
 
                         <li className=""><Link to="/StudentAttendance">Student Attendance</Link></li>
 
-                        <li className=""><Link to="">Resourse</Link></li>
+                        <li>
+                            <details>
+                                <summary>Resourse</summary>
+                                <ul>
+                                    <li><Link to="/Resources-ContentUpload">Content Resource</Link></li>
+                                    <li><Link to="/LessonResources">Lesson Resource</Link></li>
+                                    <li><Link to="/TopicResources">Topic Resource</Link></li>
+                                </ul>
+                            </details>
+                        </li>
 
-                        <li className=""><Link to="">Broadcast Notices</Link></li>
+                        <li className=""><Link to="/Notice">Broadcast Notices</Link></li>
 
 
 
@@ -217,9 +238,17 @@ function App() {
 
                         <li className=""><Link to="/StudentAttendance">Student Attendance</Link></li>
 
-                        <li className=""><Link to="">Resourse</Link></li>
+                        <li>
+                            <details>
+                                <summary>Resourse</summary>
+                                <ul>
+                                    <li><Link to="/ViewResource">View Resource</Link></li>
+                                
+                                </ul>
+                            </details>
+                        </li>
 
-                        <li className=""><Link to="">Broadcast Notices</Link></li>
+                        <li className=""><Link to="/Notice">Broadcast Notices</Link></li>
 
 
 
@@ -241,13 +270,13 @@ function App() {
             </div>
 
             {/* Main Content */}
-            <div className={`main ${isSidebarOpen ? '' : 'full'}`}>
-                <div className="topnav-grid">
-                    <button className="hamburger-btn" onClick={toggleSidebar}>
+            <div className={`main ${isSidebarOpen ? '' : 'full'} md:ml-[250px]`}>
+                <div className="topnav-grid  max-md:p-0 p-2">
+                    <button className="hamburger-btn max-md:hidden" onClick={toggleSidebar}>
                         &#9776;
                     </button>
 
-                    <div className="search-box">
+                    <div className=" max-md:hidden">
                         <Search className="icon" />
                         <input type="text" placeholder="Search..." />
                     </div>
@@ -257,11 +286,16 @@ function App() {
                         <input type="text" placeholder="Name/Admission No" />
                     </div>
 
-                    <div className="date-display">{formatted}</div>
+                    <div className="date-display max-md:hidden">{formatted}</div>
 
                     <div className="icon-wrapper"><Bell /></div>
                     <Link to="/OurProfile"><div className="icon-wrapper"><CircleUserRound /></div></Link>
+                    <button className="hamburger-btn md:hidden" onClick={toggleSidebar}>
+                        &#9776;
+                    </button>
                 </div>
+
+                
 
                 <FrontendRoute />
             </div>

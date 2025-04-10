@@ -9,7 +9,7 @@ function TeacherHomeworkReport() {
   return (
     <div className="TeacherHomeworkReport">
       <h1 className="p-2">Homework Report</h1>
-      <div className="grid grid-cols-4 items-center gap-5 text-gray-500 ">
+      <div className="grid md:grid-cols-4 items-center gap-5 text-gray-500 ">
         <div className="flex flex-col gap-2 text-gray-500 ">
           <label className='text-gray-500'>CLASS</label>
           <select name="" id="" className='px-6 py-2  border-2 border-gray-300 rounded-sm'>
@@ -57,7 +57,7 @@ function TeacherHomeworkReport() {
 {
   show && (
       <div className=" mt-10 shadow-lg p-4">
-        <div className="grid grid-cols-3 items-center">
+        <div className="grid md:grid-cols-3 max-md:gap-2 items-center">
           <div className="">
             <h1 className="">Stundet Report</h1>
           </div>
@@ -74,66 +74,39 @@ function TeacherHomeworkReport() {
           </div>
         </div>
 
-        <div className="w-full mt-6">
-          <table className='w-full'>
-            <thead className='bg-gray-100 py-2'>
-              <td className="p-2">Student Name</td>
-              <td className="">Class</td>
-              <td className="">Subject</td>
-              <td className="">Marks</td>
-              <td className="">Submition Data</td>
-              <td className="">Evaluation Date</td>
-              <td className="">Evaluated By</td>
-              <td className="">Status</td>
+        <div className="w-full mt-6 overflow-x-auto max-md:mt-4">
+  <table className="w-full max-md:border-separate border-spacing-x-4 border-spacing-y-0">
+    <thead className="">
+      <tr>
+        <th className="p-2 bg-gray-100 text-left">Student Name</th>
+        <th className="bg-gray-100 text-left">Class</th>
+        <th className="bg-gray-100 text-left">Subject</th>
+        <th className="bg-gray-100 text-left">Marks</th>
+        <th className="bg-gray-100 text-left">Submition Date</th>
+        <th className="bg-gray-100 text-left">Evaluation Date</th>
+        <th className="bg-gray-100 text-left">Evaluated By</th>
+        <th className="bg-gray-100 text-left">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {[...Array(4)].map((_, i) => (
+        <tr key={i} className="border-b-2 border-b-gray-200">
+          <td className="p-2 bg-white">Krishna Kadukar</td>
+          <td className="bg-white">Class5(B)</td>
+          <td className="bg-white">Subject 1</td>
+          <td className="bg-white">99</td>
+          <td className="bg-white">1st Jan 2000</td>
+          <td className="bg-white">20th Jan 2000</td>
+          <td className="bg-white">Name 1</td>
+          <td className="bg-white">
+            <button className="text-green-600 font-medium">Completed</button>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
 
-            </thead>
-            <tbody className=''>
-              <tr className="border-b-2 border-b-gray-200">
-                <td className="p-2">Krishna Kadukar</td>
-                <td className="">Class5(B)</td>
-                <td className="">Subject 1</td>
-                <td className="">99</td>
-                <td className="">1st Jan 2000</td>
-                <td className="">20th Jan 2000</td>
-                <td className="">Name 1</td>
-                <td className=""><button>Completed</button></td>
-              </tr>
-
-              <tr className="border-b-2 border-b-gray-200">
-                <td className="p-2">Krishna Kadukar</td>
-                <td className="">Class5(B)</td>
-                <td className="">Subject 1</td>
-                <td className="">99</td>
-                <td className="">1st Jan 2000</td>
-                <td className="">20th Jan 2000</td>
-                <td className="">Name 1</td>
-                <td className=""><button>Completed</button></td>
-              </tr>
-
-              <tr className="border-b-2 border-b-gray-200">
-                <td className="p-2">Krishna Kadukar</td>
-                <td className="">Class5(B)</td>
-                <td className="">Subject 1</td>
-                <td className="">99</td>
-                <td className="">1st Jan 2000</td>
-                <td className="">20th Jan 2000</td>
-                <td className="">Name 1</td>
-                <td className=""><button>Completed</button></td>
-              </tr>
-
-              <tr className="border-b-2 border-b-gray-200">
-                <td className="p-2">Krishna Kadukar</td>
-                <td className="">Class5(B)</td>
-                <td className="">Subject 1</td>
-                <td className="">99</td>
-                <td className="">1st Jan 2000</td>
-                <td className="">20th Jan 2000</td>
-                <td className="">Name 1</td>
-                <td className=""><button>Completed</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
       </div>
     ) 
      }

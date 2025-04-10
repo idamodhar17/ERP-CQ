@@ -8,13 +8,13 @@ export default function AdmissionList() {
         <section className="">
             <div className="">
 
-                <h1 className="text-2xl">Studnet Report</h1>
+                <h1 className="text-2xl">Admission List</h1>
 
             </div>
             <div className="shadow-lg p-6 mt-2 flex flex-col gap-6">
                 <h1 className="text-lg ">Select Criteria</h1>
 
-                <div className="grid grid-cols-4 items-center gap-5  ">
+                <div className="grid md:grid-cols-4 grid-cols-2 items-center gap-5  ">
 
                     <div className="flex flex-col gap-2 text-gray-500 ">
                         <label className='text-gray-500'>Roll</label>
@@ -54,9 +54,9 @@ export default function AdmissionList() {
             </div>
 
             <div className=" mt-10 shadow-lg p-4">
-              <div className="grid grid-cols-3 items-center">
+              <div className="grid gap-3 md:grid-cols-3 items-center">
                 <div className="">
-                  <h1 className="">Stundet Report</h1>
+                  <h1 className="">Admission Report</h1>
                 </div>
 
                 <div className="flex items-center gap-2 ">
@@ -71,8 +71,8 @@ export default function AdmissionList() {
                 </div>
               </div>
 
-              <div className="w-full mt-6">
-                <table className='w-full'>
+              <div className="w-full mt-6 overflow-x-auto">
+                <table className='w-full max-md:border-separate border-spacing-x-4 border-spacing-y-0'>
                   <thead className='bg-gray-100 py-2'>
                       <td className="p-2">Name</td>
                       <td className="">Roll</td>
