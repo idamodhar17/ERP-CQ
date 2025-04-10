@@ -31,7 +31,7 @@ export default function StudentCategory() {
                         <div className=" mt-10 shadow-lg p-4">
                             <div className="grid grid-cols-3 items-center">
                                 <div className="">
-                                    <h1 className="">Stundet Report</h1>
+                                    <h1 className="">Stundet Category</h1>
                                 </div>
 
                                 <div className="flex items-center gap-2 ">

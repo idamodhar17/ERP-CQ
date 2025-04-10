@@ -1,36 +1,21 @@
 import React from 'react'
 import { Search, Sheet, Copy, FileText   } from 'lucide-react'
-import { Link } from 'react-router-dom'
 
-export default function StudentList() {
+
+export default function TeacehrReport() {
   return (
     <>
     
     <section className="">
             <div className="">
 
-                <h1 className="text-2xl">Studnet List</h1>
+                <h1 className="text-2xl">Teacehr Report</h1>
 
             </div>
             <div className="shadow-lg p-6 mt-2 flex flex-col gap-6">
-               <div className="flex justify-between items-center">
-               <h1 className="text-lg ">Select Criteria</h1>
-               <button className='bg-blue-600 text-white py-1 px-6 rounded-xl'><Link to="/AddStudent">+ Assign Student</Link></button>
+                <h1 className="text-lg ">Select Criteria</h1>
 
-               </div>
-
-                <div className="grid grid-cols-5 items-center gap-5  ">
-
-                <div className="flex flex-col gap-2 text-gray-500 ">
-                        <label className='text-gray-500'>Academic Year</label>
-                        <select name="" id="" className='px-6 py-2  border-2 border-gray-300 rounded-sm'>
-                          <option value="" className='' >2025</option>
-                          <option value="" className='' >2026</option>
-                          <option value="" className='' >2027</option>
-                          <option value="" className='' >2028</option>
-                          
-                        </select>
-                    </div>
+                <div className="grid grid-cols-3 items-center gap-5  ">
 
                     <div className="flex flex-col gap-2 text-gray-500 ">
                         <label className='text-gray-500'>Class</label>
@@ -54,19 +39,12 @@ export default function StudentList() {
                         </select>
                     </div>
 
-                  
-
                     <div className="flex flex-col gap-2 text-gray-500 ">
-                        <label className='text-gray-500'>Search by Name</label>
-                        <input type="text" className='border-2 border-gray-400 px-4 py-1 rounded-sm ' placeholder='Name' />
-                        
+                        <label className='text-gray-500'>Name</label>
+                        <input type="text" className='px-6 py-2  border-2 border-gray-300 rounded-sm' />
                     </div>
 
-                    <div className="flex flex-col gap-2 text-gray-500 ">
-                        <label className='text-gray-500'>Search by Roll No</label>
-                        <input type="text" className='border-2 border-gray-400 px-4 py-1 rounded-sm ' placeholder='Roll No.' />
-                        
-                    </div>
+                    
 
                 </div>
 
@@ -78,7 +56,7 @@ export default function StudentList() {
             <div className=" mt-10 shadow-lg p-4">
               <div className="grid grid-cols-3 items-center">
                 <div className="">
-                  <h1 className="">Stundet List</h1>
+                  <h1 className="">Teacehr Report</h1>
                 </div>
 
                 <div className="flex items-center gap-2 ">
@@ -135,6 +113,7 @@ export default function StudentList() {
               </div>
             </div>
         </section>
+
 
     </>
   )

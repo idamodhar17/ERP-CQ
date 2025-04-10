@@ -77,88 +77,49 @@ export default function StudentAttendance() {
               </div>
 
               <form action="">
-              <div className="w-full mt-6">
-                <table className='w-full'>
-                  <thead className='bg-gray-100 py-2'>
-                      <td className="p-2">Admission No</td>
-                      <td className="">Name</td>
-                      <td className="">Roll No</td>
-                      <td className="">Attendance</td>
-                      <td className="">Notice</td>
-                  </thead>
-                  <tbody className=''>
-                      <tr className="border-b-2 border-b-gray-200">
-                        <td className="p-2">000001</td>
-                        <td className="">ABC</td>
-                        <td className="">001</td>
-                        <td className="">
-                          <div className="flex items-center gap-4">
+              <table className='w-full table-auto border-collapse'>
+  <thead className='bg-gray-100'>
+    <tr>
+      <th className="text-left p-3">Admission No</th>
+      <th className="text-left p-3">Name</th>
+      <th className="text-left p-3">Roll No</th>
+      <th className="text-left p-3">Attendance</th>
+      <th className="text-left p-3">Notice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr className="border-b-2 border-gray-200">
+      <td className="p-3">000001</td>
+      <td className="p-3">ABC</td>
+      <td className="p-3">001</td>
+      <td className="p-3">
+        <div className="flex flex-wrap gap-4">
+          <label className="flex items-center gap-1">
+            <input type="radio" name="Attend1" /> Present
+          </label>
+          <label className="flex items-center gap-1">
+            <input type="radio" name="Attend1" /> Absent
+          </label>
+          <label className="flex items-center gap-1">
+            <input type="radio" name="Attend1" /> Leave
+          </label>
+          <label className="flex items-center gap-1">
+            <input type="radio" name="Attend1" /> Holiday
+          </label>
+        </div>
+      </td>
+      <td className="p-3">
+        <input
+          type="text"
+          className="border border-gray-300 px-3 py-1 rounded-sm w-full"
+        />
+      </td>
+    </tr>
 
-                              <div className="flex items-center gap-2">
-                                <input type="radio" name="Attend" id="present" />
-                                <label htmlFor="present"  >Present</label>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <input type="radio" name="Attend" id="Absent" />
-                                <label htmlFor="Absent"  >Absent</label>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <input type="radio" name="Attend" id="Leave" />
-                                <label htmlFor="leave"  >Leave</label>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <input type="radio" name="Attend" id="Holliday" />
-                                <label htmlFor="Holliday"  >Holliday</label>
-                              </div>
+    {/* Duplicate for other students */}
+  </tbody>
+</table>
 
-                            </div>
-                          </td>
-                       
-                        <td className="">
-                          <div className="">
-                          <input type="text" className="border-2 border-gray-400 px-6 py-1 rounded-sm" />
-                          </div>
-                          </td>
-                        
-                      </tr>
-
-                      <tr className="border-b-2 border-b-gray-200">
-                        <td className="p-2">000001</td>
-                        <td className="">ABC</td>
-                        <td className="">002</td>
-                        <td className="">
-                          <div className="flex items-center gap-4">
-
-                              <div className="flex items-center gap-2">
-                                <input type="radio" name="Attend" id="present" />
-                                <label htmlFor="present"  >Present</label>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <input type="radio" name="Attend" id="Absent" />
-                                <label htmlFor="Absent"  >Absent</label>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <input type="radio" name="Attend" id="Leave" />
-                                <label htmlFor="leave"  >Leave</label>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <input type="radio" name="Attend" id="Holliday" />
-                                <label htmlFor="Holliday"  >Holliday</label>
-                              </div>
-
-                            </div>
-                          </td>
-                        
-                          <td className="">
-                          <div className="">
-                            <input type="text" className="border-2 border-gray-400 px-6 py-1 rounded-sm" />
-                          </div>
-                          </td>
-                        
-                      </tr>
-                  </tbody>
-                </table>
-              </div>
 
               <div className="flex justify-center items-center py-6">
                 <button className='bg-gradient-to-r to-blue-600 from-blue-400 px-6 py-2 text-white rounded-sm'>Save Attendace</button>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function AddStudent() {
+export default function AddTeacher() {
   const [activeTab, setActiveTab] = useState("personal");
 
   const tabClass = (tab) =>
@@ -11,7 +11,7 @@ export default function AddStudent() {
     }`;
 
   return (
-    <div className="p-6 bg-white rounded shadow-lg  mx-auto">
+    <div className="p-6 bg-white rounded shadow-lg text-gray-600  mx-auto">
       {/* Tabs */}
       <div className="flex flex-wrap border-b mb-6 gap-4">
         {[
@@ -32,42 +32,30 @@ export default function AddStudent() {
 
       {/* Panel: Personal Info */}
       {activeTab === "personal" && (
-        <div className="grid grid-cols-2 gap-6">
-          <div>
-            <label className="block mb-1">Academic Year *</label>
-            <input type="text" className="w-full border p-2 rounded" placeholder="2025 [Jan-Dec]" />
-          </div>
-          <div>
-            <label className="block mb-1">Class *</label>
-            <input type="text" className="w-full border p-2 rounded" />
-          </div>
-          <div>
-            <label className="block mb-1">Section *</label>
-            <input type="text" className="w-full border p-2 rounded" />
-          </div>
-          <div>
-            <label className="block mb-1">Admission Number *</label>
-            <input type="text" className="w-full border p-2 rounded" />
-          </div>
-          <div>
-            <label className="block mb-1">Admission Date</label>
-            <input type="date" className="w-full border p-2 rounded" />
-          </div>
-          <div>
-            <label className="block mb-1">Roll Number</label>
-            <input type="text" className="w-full border p-2 rounded" />
-          </div>
-          <div>
-            <label className="block mb-1">Group</label>
-            <input type="text" className="w-full border p-2 rounded" />
-          </div>
-          <div>
+        <div className="grid grid-cols-2 gap-6 ">
+
+<div>
             <label className="block mb-1">First Name *</label>
             <input type="text" className="w-full border p-2 rounded" />
           </div>
           <div>
             <label className="block mb-1">Last Name *</label>
             <input type="text" className="w-full border p-2 rounded" />
+          </div>
+
+          <div>
+            <label className="block mb-1">Academic Year *</label>
+            <input type="text" className="w-full border p-2 rounded" placeholder="2025 [Jan-Dec]" />
+          </div>
+          
+         
+          <div>
+            <label className="block mb-1">Joining Number *</label>
+            <input type="text" className="w-full border p-2 rounded" />
+          </div>
+          <div>
+            <label className="block mb-1">Joinig Date</label>
+            <input type="date" className="w-full border p-2 rounded" />
           </div>
 
           <div>
@@ -79,6 +67,9 @@ export default function AddStudent() {
             <input type="email" className="w-full border p-2 rounded" />
           </div>
           
+          
+
+         
           <div>
             <label className="block mb-1">Gender *</label>
             <select className="w-full border p-2 rounded">
@@ -91,16 +82,9 @@ export default function AddStudent() {
             <label className="block mb-1">Date of Birth</label>
             <input type="date" className="w-full border p-2 rounded" />
           </div>
-          <div>
-            <label className="block mb-1">Religion</label>
-            <input type="text" className="w-full border p-2 rounded" />
-          </div>
-          <div>
-            <label className="block mb-1">Caste</label>
-            <input type="text" className="w-full border p-2 rounded" />
-          </div>
+   
           <div className="col-span-2">
-            <label className="block mb-1">Student Photo</label>
+            <label className="block mb-1">Teacher Photo</label>
             <input type="file" className="border p-2 rounded w-full" />
           </div>
         </div>
@@ -159,7 +143,7 @@ export default function AddStudent() {
             <input type="text" className="w-full border p-2 rounded" />
           </div>
           <div>
-            <label className="block mb-1">Previous Class</label>
+            <label className="block mb-1">Previous Job</label>
             <input type="text" className="w-full border p-2 rounded" />
           </div>
           <div className="col-span-2">
