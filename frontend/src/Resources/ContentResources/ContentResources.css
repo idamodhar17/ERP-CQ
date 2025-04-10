@@ -1,0 +1,38 @@
+.ContentResources-title , .ContentResources-type , .ContentResources-available , .ContentResources-class
+, .ContentResources-section {
+    display: flex;
+    flex-direction: column;
+    color: grey;
+    padding: 4%;
+}
+
+.ContentResources-MainPage{
+    display: flex;
+    gap: 2%;
+}
+
+.ContentResources-left h1{
+    padding: 2%;
+    font-size: large;
+}
+
+.ContentResources-left{
+    width: 30%;
+    box-shadow:  0 4px 12px rgb(0, 0, 0 , 0.1);
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 1%;
+}
+
+.ContentResources-radio{
+    display: flex;
+    gap: 5%;
+}
+
+.ContentResources-title input , .ContentResources-class select , .ContentResources-type select 
+    , .ContentResources-section select{
+    border: 1px solid gray;
+    border-radius: 7px;
+    padding: 3%;
+}
+

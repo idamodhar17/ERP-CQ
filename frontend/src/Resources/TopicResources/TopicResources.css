@@ -1,0 +1,51 @@
+.TopicResources-title , .TopicResources-subject , .TopicResources-available , .TopicResources-class
+, .TopicResources-section {
+    display: flex;
+    flex-direction: column;
+    color: grey;
+    padding: 4%;
+}
+
+.TopicResources-MainPage{
+    display: flex;
+    gap: 2%;
+}
+
+.TopicResources-left h1{
+    padding: 2%;
+    font-size: large;
+}
+
+.TopicResources-left{
+    width: 30%;
+    box-shadow:  0 4px 12px rgb(0, 0, 0 , 0.1);
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 1%;
+}
+
+.TopicResources-radio{
+    display: flex;
+    gap: 5%;
+}
+
+.TopicResources-title input , .TopicResources-class select , .TopicResources-subject select 
+    , .TopicResources-section select{
+    border: 1px solid gray;
+    border-radius: 7px;
+    padding: 3%;
+}
+
+.TopicResources-btn button {
+    color: white;
+    padding: 2% 15%;
+    border-radius: 10px;
+    margin-top: 4%;
+    cursor: pointer;
+    background-color: rgba(0, 76, 255, 0.669);
+}
+
+.TopicResources-btn{
+    display: flex;
+    justify-content: center;
+}
