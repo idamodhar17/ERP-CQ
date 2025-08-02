@@ -6,7 +6,7 @@ import FrontendRoute from '../Routes/FrontendRoute';
 
 function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [userRole, setUserRole] = useState("teacher"); // Change this to "teacher" to test teacher view
+    const [userRole, setUserRole] = useState("parent"); // Change this to "teacher" to test teacher view
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
