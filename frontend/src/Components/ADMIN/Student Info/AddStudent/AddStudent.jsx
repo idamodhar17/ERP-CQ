@@ -69,6 +69,16 @@ export default function AddStudent() {
             <label className="block mb-1">Last Name *</label>
             <input type="text" className="w-full border p-2 rounded" />
           </div>
+
+          <div>
+            <label className="block mb-1">Contact </label>
+            <input type="tel" className="w-full border p-2 rounded" />
+          </div>
+          <div>
+            <label className="block mb-1">E-mail</label>
+            <input type="email" className="w-full border p-2 rounded" />
+          </div>
+          
           <div>
             <label className="block mb-1">Gender *</label>
             <select className="w-full border p-2 rounded">

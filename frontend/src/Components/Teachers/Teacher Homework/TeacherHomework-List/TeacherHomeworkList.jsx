@@ -11,7 +11,7 @@ function TeacherHomeworkList() {
                 <h1 className="p-2">Homework List</h1>
                 <button className=" text-white bg-blue-500 rounded-lg px-3 py-1">+ Add Homework</button>
             </div>
-            <div className="grid grid-cols-3 items-center gap-5 text-gray-500 ">
+            <div className="grid md:grid-cols-3 items-center gap-5 text-gray-500 ">
                 <div className="flex flex-col gap-2 text-gray-500 ">
                     <label className='text-gray-500'>CLASS</label>
                     <select name="" id="" className='px-6 py-2  border-2 border-gray-300 rounded-sm'>
@@ -56,7 +56,7 @@ function TeacherHomeworkList() {
             {
   show && (
             <div className=" mt-10 shadow-lg p-4">
-                <div className="grid grid-cols-3 items-center">
+                <div className="grid md:grid-cols-3 max-md:gap-2 items-center">
                     <div className="">
                         <h1 className="">Homework List</h1>
                     </div>
@@ -73,8 +73,8 @@ function TeacherHomeworkList() {
                     </div>
                 </div>
 
-                <div className="w-full mt-6">
-                    <table className='w-full'>
+                <div className="w-full mt-6 overflow-x-auto">
+                    <table className='w-full border-separate border-spacing-x-4 border-spacing-y-0'>
                         <thead className='bg-gray-100 py-2'>
                             <td className="p-2">SL</td>
                             <td className="">Class</td>
